@@ -6,7 +6,7 @@
 /*   By: yobourai <yobourai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 06:34:55 by yobourai          #+#    #+#             */
-/*   Updated: 2024/09/14 02:45:28 by yobourai         ###   ########.fr       */
+/*   Updated: 2024/09/16 02:01:10 by yobourai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@
 #  define BUFFER_SIZE 1
 
 # endif
+# include <fcntl.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-#include <fcntl.h>
-#include <stdio.h>
 
-int	ft_putstr(char *s);
-int county_line(char *filee);
+int		county_line(char *filee);
 char	*get_next_line(int fd);
 int		ft_strlen(char *str);
 char	*ft_strjoin(char *ptr, char *str);

@@ -6,7 +6,7 @@
 /*   By: yobourai <yobourai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 01:13:45 by yobourai          #+#    #+#             */
-/*   Updated: 2024/09/14 01:42:02 by yobourai         ###   ########.fr       */
+/*   Updated: 2024/09/16 02:00:37 by yobourai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,6 @@ char	*ft_newline(char *ptr)
 	return (str);
 }
 
-
 void	ft_read(char **str, char **ptr, int fd, ssize_t nbyte)
 {
 	char	*tmp;
@@ -131,35 +130,6 @@ char	*get_next_line(int fd)
 	if (!str)
 		return (ft_free(&ptr), NULL);
 	tmp = ptr;
-	ptr = ft_saveline(tmp);	
+	ptr = ft_saveline(tmp);
 	return (ft_free(&tmp), str);
 }
-
-//  int main()
-// {
-//     char *str;
-//     int fd;
-//     fd = open("txt.txt", O_RDONLY); 
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-//     printf("%s", get_next_line(fd));
-// }

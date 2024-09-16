@@ -6,30 +6,11 @@
 /*   By: yobourai <yobourai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 06:34:21 by yobourai          #+#    #+#             */
-/*   Updated: 2024/09/14 02:53:26 by yobourai         ###   ########.fr       */
+/*   Updated: 2024/09/16 01:43:39 by yobourai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-
-int	ft_putstr(char *s)
-{
-	int	i;
-
-	i = 0;
-	if (!s)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
-	while (s[i])
-	{
-		write(1, &s[i], 1);
-		i++;
-	}
-	return (i);
-}
 
 int	ft_strlen(char *str)
 {
