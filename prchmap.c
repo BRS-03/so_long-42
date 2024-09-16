@@ -6,7 +6,7 @@
 /*   By: yobourai <yobourai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 01:41:04 by yobourai          #+#    #+#             */
-/*   Updated: 2024/09/16 04:49:45 by yobourai         ###   ########.fr       */
+/*   Updated: 2024/09/16 05:15:21 by yobourai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	ft_error_chmap(char **map)
 		{
 			if (map[i][j] == 'C')
 			{
-				ft_putstr("map invalid \n");
+				ft_putstr("map invalid\n");
 				return (1);
 			}
 			j++;

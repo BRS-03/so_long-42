@@ -6,7 +6,7 @@
 /*   By: yobourai <yobourai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 07:25:39 by yobourai          #+#    #+#             */
-/*   Updated: 2024/09/16 01:46:54 by yobourai         ###   ########.fr       */
+/*   Updated: 2024/09/16 05:15:01 by yobourai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	ft_error_map(char **str)
 		j = -1;
 	}
 	if (coin < 1 || bd != 0)
-		return (ft_putstr("error or error inside the map"), 1);
+		return (ft_putstr("something wrong\n"), 1);
 	return (0);
 }
 
@@ -92,7 +92,7 @@ int	ft_errorscmap(char **str)
 		j = -1;
 	}
 	if (res != 1 || player != 1)
-		return (ft_putstr("error or error inside the map"), 1);
+		return (ft_putstr("something wrong\n"), 1);
 	return (0);
 }
 
@@ -109,7 +109,7 @@ int	ft_error_wall(char *tmp)
 	}
 	if (tmp[i] != '1' && tmp[i] != '\0')
 	{
-		ft_putstr("error in the wall");
+		ft_putstr("error in the wall\n");
 		return (1);
 	}
 	return (0);

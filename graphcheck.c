@@ -6,7 +6,7 @@
 /*   By: yobourai <yobourai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 07:23:45 by yobourai          #+#    #+#             */
-/*   Updated: 2024/09/16 03:49:58 by yobourai         ###   ########.fr       */
+/*   Updated: 2024/09/16 05:19:43 by yobourai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void	handle_image_load_failure(t_ply *mpr, int count)
 		mlx_delete_image(mpr->mlx, mpr->exit);
 	mlx_terminate(mpr->mlx);
 	ft_putstr("img not loaded\n");
+	exit(EXIT_FAILURE);
 }
 
 mlx_image_t	*load_texture_as_image(t_ply *mpr, const char *path)
@@ -91,19 +92,19 @@ mlx_image_t	*load_texture_as_image(t_ply *mpr, const char *path)
 
 void	setup_images(t_ply *mpr)
 {
-	mpr->wall = load_texture_as_image(mpr, "./images.png");
+	mpr->wall = load_texture_as_image(mpr, "./textures/images.png");
 	if (!mpr->wall)
 		handle_image_load_failure(mpr, 0);
-	mpr->player = load_texture_as_image(mpr, "./player.png");
+	mpr->player = load_texture_as_image(mpr, "./textures/player.png");
 	if (!mpr->player)
 		handle_image_load_failure(mpr, 1);
-	mpr->coin = load_texture_as_image(mpr, "./imagesCOIN.png");
+	mpr->coin = load_texture_as_image(mpr, "./textures/imagesCOIN.png");
 	if (!mpr->coin)
 		handle_image_load_failure(mpr, 2);
-	mpr->exit = load_texture_as_image(mpr, "./exit.png");
+	mpr->exit = load_texture_as_image(mpr, "./textures/exit.png");
 	if (!mpr->exit)
 		handle_image_load_failure(mpr, 3);
-	mpr->zero = load_texture_as_image(mpr, "./wero.png");
+	mpr->zero = load_texture_as_image(mpr, "./textures/wero.png");
 	if (!mpr->zero)
 		handle_image_load_failure(mpr, 4);
 }

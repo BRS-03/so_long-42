@@ -6,7 +6,7 @@
 /*   By: yobourai <yobourai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 07:23:32 by yobourai          #+#    #+#             */
-/*   Updated: 2024/09/16 04:31:14 by yobourai         ###   ########.fr       */
+/*   Updated: 2024/09/16 05:08:12 by yobourai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,12 @@ void	handle_movement(t_ply *prm, int dy, int dx, mlx_key_data_t keyboard)
 	if (prm->map[new_y][new_x] != '1' && (keyboard.action == MLX_PRESS
 			|| keyboard.action == MLX_REPEAT))
 	{
-		prm->move++;
-		printf("move = %d\n", prm->move);
+		if ((prm->map[new_y][new_x] != 'E' && prm->cnb >= 0) ||
+		(prm->map[new_y][new_x] == 'E' && prm->cnb == 0))
+		{
+			prm->move++;
+			printf("move: [%d]\n", prm->move);
+		}
 		update_player_position(prm, new_y, new_x);
 	}
 }

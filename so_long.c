@@ -6,11 +6,10 @@
 /*   By: yobourai <yobourai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 07:11:09 by yobourai          #+#    #+#             */
-/*   Updated: 2024/09/16 04:50:18 by yobourai         ###   ########.fr       */
+/*   Updated: 2024/09/16 05:15:47 by yobourai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
 #include "so_long.h"
 
 void	initialize_mlx(t_ply *mpr)
@@ -24,7 +23,7 @@ void	initialize_mlx(t_ply *mpr)
 	if (!mpr->mlx)
 	{
 		printf("Failed to initialize mlx\n");
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 }
 
@@ -47,8 +46,8 @@ void	files(int ac, char *av[])
 
 	if (ac != 2)
 	{
-		printf("Erorr\nname of the map !!\n");
-		exit(1);
+		printf("Error: name of the map !!\n");
+		exit(EXIT_FAILURE);
 	}
 	len = 0;
 	while (av[1][len] != '\0')
@@ -57,7 +56,7 @@ void	files(int ac, char *av[])
 		- 3] != 'b' || av[1][len - 4] != '.')
 	{
 		printf("Invalid file extension expected .ber\n");
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 }
 
