@@ -6,14 +6,14 @@
 /*   By: yobourai <yobourai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 07:26:04 by yobourai          #+#    #+#             */
-/*   Updated: 2024/09/16 05:25:10 by yobourai         ###   ########.fr       */
+/*   Updated: 2025/02/19 01:16:01 by yobourai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# include "/Users/yobourai/Desktop/MLX42/include/MLX42/MLX42.h"
+# include "/Users/yobourai/Desktop/so_long-42/MLX42/include/MLX42/MLX42.h"
 # include "get_next_line.h"
 # include <fcntl.h>
 # include <stdio.h>
